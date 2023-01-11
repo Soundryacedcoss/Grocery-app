@@ -1,11 +1,8 @@
-import img1 from '../images/offer1.png'
-import img2 from '../images/offer2.png'
-import img3 from '../images/offer3.png'
 const data = [
   {
     _id: "d0975326-7b43-479e-a109-cb818abec62d",
     title: "Chocolate Mousse Torte Cake",
-    quantity:0,
+    quantity: 0,
     description:
       "Two rich, chocolate cake layers are filled with luscious chocolate whipped cream mousse, then covered with milk chocolate frosting and a dark chocolate glaze. This best selling delight is then garnished with fudge rosettes and dark chocolate shaves. Includes a Chocolate Occasion Plaque, matching Greeting Card and is packaged in an elegant gift box!",
     category: "Bakery",
@@ -15,7 +12,9 @@ const data = [
     size: "7 inches in diameter",
     price: 42.95,
     stock: "5",
-    images: [img1],
+    images: [
+      "https://images.pexels.com/photos/1342324/pexels-photo-1342324.jpeg",
+    ],
     suggestion: [
       "Serves 6 to 8",
       "Ships Nationwide in Refrigerated Packaging",
@@ -28,7 +27,7 @@ const data = [
   },
   {
     _id: "ebed34eb-7533-49f5-91cb-37c12f20d4b1",
-    quantity:0,
+    quantity: 0,
     title: "Triple Chocolate Enrobed Brownie Cake",
     description:
       "This is the perfect cake for the true chocolate lover. Our dense, moist brownie cake is covered in not one, but three layers of decadent chocolate. The cake is coated with a rich chocolate fondant icing, showered with dark chocolate shavings and then finally drizzled with milk and dark chocolate glazes. This triple-chocolate delight is sure to satisfy any sweet tooth. Each cake is delivered in an elegant gift box with a chocolate occasion plaque and personalized greeting card to celebrate any occasion.",
@@ -39,7 +38,9 @@ const data = [
     size: "7 inches in diameter",
     price: 39.95,
     stock: "2",
-    images: [img2],
+    images: [
+      "https://images.pexels.com/photos/4110097/pexels-photo-4110097.jpeg",
+    ],
     suggestion: ["Serves 6 to 8", "Certified KOF-K Kosher"],
     allegations: [
       "Unless otherwise noted, products contain milk, wheat, soy and egg, and were produced on equipment that processes peanuts, almonds, hazelnuts, pecans, walnuts.",
@@ -48,7 +49,7 @@ const data = [
   },
   {
     _id: "fb79562d-e470-4445-990b-06aa875d3e97",
-    quantity:0,
+    quantity: 0,
     title: "Reddi Wip Dairy Whipped Topping Extra Creamy Aerosol Refrigerated",
     description:
       "Reddi Wip® Extra Creamy Sweetened Dairy Whipped Topping. Milk from cows. Not treated with artificial growth hormone*. Made with real cream. No artificial flavors or sweeteners. 15 calories per 2 tbsp. Ultra-pasteurized.",
@@ -60,7 +61,7 @@ const data = [
     price: 3.19,
     stock: "7",
     images: [
-img1,img2,img3
+      "https://images.pexels.com/photos/4791265/pexels-photo-4791265.jpeg",
     ],
     suggestion: [
       " Shake it! Shake it! 4 times before use then remove cap.",
@@ -79,7 +80,7 @@ img1,img2,img3
   },
   {
     _id: "61c79187-76f6-4747-a5cf-d7e26dcea535",
-    quantity:0,
+    quantity: 0,
     title: "Red Velvet Chocolate Cake",
     description:
       "A truly decadent southern classic: two rich layers of red chocolate cake, fill and covered with the finest, pure cream cheese frosting, and then garnished with white chocolate sprinkles around the sides. Includes a Chocolate Occasion Plaque, matching Greeting Card and is packaged in an elegant gift box!",
@@ -90,7 +91,9 @@ img1,img2,img3
     size: "7 inches in diameter",
     price: 42.95,
     stock: "4",
-    images: ["/public/images/red-velvet-chocolate-cake.png"],
+    images: [
+      "https://images.pexels.com/photos/1854664/pexels-photo-1854664.jpeg",
+    ],
     suggestion: [
       "Serves 6 to 8",
       "Certified KOF-K Kosher",
@@ -103,7 +106,7 @@ img1,img2,img3
   },
   {
     _id: "b72f5d8e-e586-47cd-aba7-202814ca6609",
-    quantity:0,
+    quantity: 0,
     title: "Rice Dream Original Non-Dairy Beverage Organic",
     description:
       "Rice Dream® Organic Original Enriched Rice Drink. Value size. Calcium \u0026 vitamin D. Easy to digest. USDA Organic. Non GMO project.",
@@ -115,8 +118,7 @@ img1,img2,img3
     price: 5.19,
     stock: "21",
     images: [
-      "/public/images/rice-dream-original-non-dairy-beverage-organic-1.jpg",
-      "/public/images/rice-dream-original-non-dairy-beverage-organic-2.jpg",
+      "https://images.pexels.com/photos/132694/pexels-photo-132694.jpeg",
     ],
     suggestion: [
       "Shake well.",
@@ -130,7 +132,7 @@ img1,img2,img3
   },
   {
     _id: "5ffd3e0b-2a31-4d97-aced-e242b5061b24",
-    quantity:0,
+    quantity: 0,
     title: "Member's Mark Mini Plain Sliced Bagels",
     description:
       "Kettle boiled like they do in the Big Apple, these heat-and-serve mini bagels are made with premium ingredients like real yeast and triple-filtered water.",
@@ -141,7 +143,9 @@ img1,img2,img3
     size: "12ct",
     price: 20.99,
     stock: "3",
-    images: ["/public/images/members-mark-mini-plain-sliced-bagels.jpg"],
+    images: [
+      "https://images.pexels.com/photos/1375807/pexels-photo-1375807.jpeg",
+    ],
     suggestion: [
       "Authentic New York-style kettle boiled bagels",
       "Soft, chewy and delicious",
@@ -152,7 +156,7 @@ img1,img2,img3
   },
   {
     _id: "b7399b85-6860-4b86-b169-3dc068d444ae",
-    quantity:0,
+    quantity: 0,
     title: "Daiya Dairy Free Greek Yogurt Black Cherry",
     description:
       "Daiya Dairy Free Black Cherry Greek Yogurt Style. New. Rich \u0026 creamy \u0026 lots of fruit. Deliciously Dairy-Free®. Soy free. 8g protein*. 3g* fiber. Excellent source of calcium. Probiotics. Excellent source of Vitamin B12.",
@@ -164,16 +168,14 @@ img1,img2,img3
     price: 1.95,
     stock: "15",
     images: [
-      "/public/images/daiya-dairy-free-greek-yogurt-black-cherry-1.jpg",
-      "/public/images/daiya-dairy-free-greek-yogurt-black-cherry-2.jpg",
-      "/public/images/daiya-dairy-free-greek-yogurt-black-cherry-3.jpg",
+      "https://images.pexels.com/photos/4110101/pexels-photo-4110101.jpeg",
     ],
     suggestion: ["Keep refrigerated."],
     allegations: ["Contains coconut."],
   },
   {
     _id: "c8d5c1c3-15e8-4112-a043-a0d33a8de28d",
-    quantity:0,
+    quantity: 0,
     title: "Daily Chef Mini Candy Cookies",
     description: "Delicious mini candy cookies baked fresh in Club.",
     category: "Bakery",
@@ -183,13 +185,15 @@ img1,img2,img3
     size: "36ct",
     price: 28.99,
     stock: "12",
-    images: ["/public/images/daily-chef-mini-candy-cookies.jpg"],
+    images: [
+      "https://images.pexels.com/photos/691152/pexels-photo-691152.jpeg",
+    ],
     suggestion: [],
     allegations: [],
   },
   {
     _id: "74835a8d-b17b-4653-b1b1-fc58b4df19b9",
-    quantity:0,
+    quantity: 0,
     title:
       "So Delicious Cultured Coconut Milk Yogurt Vanilla Dairy \u0026 Soy Free Organic",
     description:
@@ -202,8 +206,7 @@ img1,img2,img3
     price: 2.09,
     stock: "15",
     images: [
-      "/public/images/so-delicious-cultured-coconut-milk-yogurt-vanilla-dairy-soy-free-organic-1.jpg",
-      "/public/images/so-delicious-cultured-coconut-milk-yogurt-vanilla-dairy-soy-free-organic-2.jpg",
+      "https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg",
     ],
     suggestion: ["Keep refrigerated."],
     allegations: [
@@ -214,7 +217,7 @@ img1,img2,img3
   },
   {
     _id: "92de4c84-2f09-43c3-88e2-c0a000b93037",
-    quantity:0,
+    quantity: 0,
     title: "Gaston’s Bakery Small Puff Pastry Squares",
     description:
       "Easily create delicious pies, savory hors d’oeuvres, tarts, baklava and more with these ready-to-use puff pastry squares. Puff pastry bakes up light and flaky and pairs perfectly with a wide range of toppings and fillings.",
@@ -225,7 +228,9 @@ img1,img2,img3
     size: "32 pieces",
     price: 39.95,
     stock: "2",
-    images: ["/public/images/gastons-bakery-small-puff-pastry-squares.jpg"],
+    images: [
+      "https://images.pexels.com/photos/132694/pexels-photo-132694.jpeg",
+    ],
     suggestion: [],
     allegations: [
       "Not available to ship to Hawaii or Alaska.",
@@ -234,7 +239,7 @@ img1,img2,img3
   },
   {
     _id: "df52c530-a741-4eb7-9558-d2faaacec380",
-    quantity:0,
+    quantity: 0,
     title: "Signature Bakery Assortment",
     description:
       "Our Signature Bakery Assortment is ideal when you need a cookie delivery. This bakery gift is filled with baked goods such as lemon poppyseed coffee cake and baklava handcrafted in our own bakery. We've added some of our most popular cookie types, from raspberry galettes to Moose Munch® Cookies, to round out this generous collection.",
@@ -245,7 +250,9 @@ img1,img2,img3
     size: "Large",
     price: 59.99,
     stock: "6",
-    images: ["/public/images/signature-bakery-assortment.jpg"],
+    images: [
+      "https://images.pexels.com/photos/132694/pexels-photo-132694.jpeg",
+    ],
     suggestion: [],
     allegations: [
       "Unless otherwise noted, products contain milk, wheat, soy and egg, and were produced on equipment that processes peanuts, almonds, hazelnuts, pecans, walnuts.",
@@ -254,7 +261,7 @@ img1,img2,img3
   },
   {
     _id: "334d5358-3cdf-473b-b894-5115b0df7c6f",
-    quantity:0,
+    quantity: 0,
     title: "Gaston’s Bakery Croissants",
     description:
       "Our vendor will ship directly to you. Allow 5-7 business days for delivery. Not available to ship to Hawaii or Alaska. $7.50 handling and shipping fee applied in cart to ensure freshness.",
@@ -266,16 +273,14 @@ img1,img2,img3
     price: 34.95,
     stock: "8",
     images: [
-      "/public/images/gastons-bakery-croissants-1.jpg",
-      "/public/images/gastons-bakery-croissants-2.jpg",
-      "/public/images/gastons-bakery-croissants-3.jpg",
+      "https://images.pexels.com/photos/887853/pexels-photo-887853.jpeg",
     ],
     suggestion: ["15 ready-to-bake croissants"],
     allegations: [],
   },
   {
     _id: "f3b3a260-f7e4-45c8-86b2-d6f48a1024d1",
-    quantity:0,
+    quantity: 0,
     title: "Daiya Dairy Free Greek Yogurt Black Cherry",
     description:
       "Daiya Dairy Free Black Cherry Greek Yogurt Style. New. Rich \u0026 creamy \u0026 lots of fruit. Deliciously Dairy-Free®. Soy free. 8g protein*. 3g* fiber. Excellent source of calcium. Probiotics. Excellent source of Vitamin B12.",
@@ -287,15 +292,14 @@ img1,img2,img3
     price: 1.92,
     stock: "15",
     images: [
-      "/public/images/so-delicious-cultured-coconut-milk-yogurt-vanilla-dairy-soy-free-organic-1.jpg",
-      "/public/images/so-delicious-cultured-coconut-milk-yogurt-vanilla-dairy-soy-free-organic-2.jpg",
+      "https://images.pexels.com/photos/65882/chocolate-dark-coffee-confiserie-65882.jpeg",
     ],
     suggestion: ["Keep refrigerated."],
     allegations: ["Contains coconut."],
   },
   {
     _id: "f82c6b8a-2c6a-45e2-887f-ad5f34631439",
-    quantity:0,
+    quantity: 0,
     title: "Celeste Pizza For One Vegetable Frozen",
     description:
       "Celeste® Pizza For One™ Vegetable. Authentic Italian Since 1930. Microwaves In Minutes. Truecookplus®. With Green \u0026 Red Peppers, Mushrooms, Onions \u0026 Olives. ",
@@ -307,8 +311,7 @@ img1,img2,img3
     price: 1,
     stock: "102",
     images: [
-      "/public/images/celeste-pizza-for-one-vegetable-frozen-1.jpg",
-      "/public/images/celeste-pizza-for-one-vegetable-frozen-2.jpg",
+      "https://images.pexels.com/photos/918327/pexels-photo-918327.jpeg",
     ],
     suggestion: [
       "Do not put microwave disk in conventional oven.",
@@ -319,7 +322,7 @@ img1,img2,img3
   },
   {
     _id: "7b862543-876f-4bac-b56a-630f6e239079",
-    quantity:0,
+    quantity: 0,
     title: "Nestle Coffee-mate Powder Coffee Creamer Original",
     description:
       "Nestle® Coffee-Mate® The Original Coffee Creamer. Easy-grip handle. This product is non-dairy, lactose-free, cholesterol-free and gluten-free. Please recycle. Gluten free. Lactose free. Per 1 tsp: 10 calories. 0.5g sat fat, 3% DV. 0mg sodium, 0% DV. 0g sugars.",
@@ -331,9 +334,7 @@ img1,img2,img3
     price: 6.99,
     stock: "12",
     images: [
-      "/public/images/nestle-coffee-matepowder-coffee-creamer-original-1.jpg",
-      "/public/images/nestle-coffee-matepowder-coffee-creamer-original-2.jpg",
-      "/public/images/nestle-coffee-matepowder-coffee-creamer-original-3.jpg",
+      "https://images.pexels.com/photos/2067396/pexels-photo-2067396.jpeg",
     ],
     suggestion: [
       "Spoon Coffee-Mate into prepared coffee, tea, or cocoa.",
@@ -343,7 +344,7 @@ img1,img2,img3
   },
   {
     _id: "b971e50a-8a61-4c0c-b5ab-94289dabcf92",
-    quantity:0,
+    quantity: 0,
     title: "Nature's Promise Free from Vanilla Almond Milk Refrigerated",
     description:
       "Nature's Promise™ Vanilla Almondmilk. Free from: Artificial colors. Artificial flavors. Artificial preservatives. Naturally flavored. Calcium enriched. Excellent source of vitamin D. Lactose \u0026 dairy free.",
@@ -355,8 +356,7 @@ img1,img2,img3
     price: 2.02,
     stock: "1",
     images: [
-      "/public/images/natures-promise-free-from-vanilla-almond-milk-refrigerated-1.jpg",
-      "/public/images/natures-promise-free-from-vanilla-almond-milk-refrigerated-2.jpg",
+      "https://images.pexels.com/photos/350345/pexels-photo-350345.jpeg",
     ],
     suggestion: [
       "Shake well + serve chilled.",
@@ -366,7 +366,7 @@ img1,img2,img3
   },
   {
     _id: "4a8913f9-29a1-40e0-81bc-c37b564e0b5d",
-    quantity:0,
+    quantity: 0,
     title: "Weight Watchers Smart Ones Thin Crust Pizza Pepperoni",
     description:
       "Weight Watchers Smart Ones® Thin Crust Pepperoni Pizza. Savory Italian recipes. With tomato sauce and reduced fat cheese. 17g of protein. U.S. inspected and passed by Department of Agriculture.",
@@ -378,8 +378,7 @@ img1,img2,img3
     price: 2.39,
     stock: "51",
     images: [
-      "/public/images/weight-watchers-smart-ones-thin-crust-pizza-pepperoni-1.jpg",
-      "/public/images/weight-watchers-smart-ones-thin-crust-pizza-pepperoni-2.jpg",
+      "https://images.pexels.com/photos/887853/pexels-photo-887853.jpeg",
     ],
     suggestion: [
       "Keep frozen.",
@@ -391,7 +390,7 @@ img1,img2,img3
   },
   {
     _id: "cc1f83c1-70cd-4d7e-b204-ec79011ffa8d",
-    quantity:0,
+    quantity: 0,
     title:
       "Kellogg's Special K Flatbread Breakfast Sandwich, Sausage, Egg, and Cheese",
     description:
@@ -404,7 +403,7 @@ img1,img2,img3
     price: 7.49,
     stock: "11",
     images: [
-      "/public/images/kelloggs-special-k-flatbread-breakfast-sandwich-sausage-egg-and-cheese.jpg",
+      "https://images.pexels.com/photos/2067420/pexels-photo-2067420.jpeg",
     ],
     suggestion: ["Keep frozen."],
     allegations: [
@@ -415,7 +414,7 @@ img1,img2,img3
   },
   {
     _id: "5d3611cb-2140-4984-8535-0e40920fbd68",
-    quantity:0,
+    quantity: 0,
     title: "Kellogg's Eggo Chocolate Chip Waffles",
     description:
       "Get a sweet start to your morning with Eggo® Chocolate Chip waffles. They have a light, crispy texture and a yummy chocolatey taste that makes eating breakfast a real delight! (from Kellogg's)",
@@ -426,7 +425,9 @@ img1,img2,img3
     size: "10 ct",
     price: 3.32,
     stock: "11",
-    images: ["/public/images/kelloggs-eggo-chocolate-chip-waffles.jpg"],
+    images: [
+      "https://images.pexels.com/photos/4791265/pexels-photo-4791265.jpeg",
+    ],
     suggestion: ["Keep frozen."],
     allegations: [
       "Contains Eggs",
@@ -437,7 +438,7 @@ img1,img2,img3
   },
   {
     _id: "55a25e37-f9b1-4d63-b088-4c461f675009",
-    quantity:0,
+    quantity: 0,
     title: "Deep Cocktail Samosa (Potato \u0026 Pea)",
     description: "Crispy triangles filled with spicy potatoes and peas.",
     category: "Frozen",
@@ -447,7 +448,9 @@ img1,img2,img3
     size: "40 pcs",
     price: 4.99,
     stock: "6",
-    images: ["/public/images/deep-cocktail-samosa-potato-pea.jpg"],
+    images: [
+      "https://images.pexels.com/photos/1009841/pexels-photo-1009841.jpeg",
+    ],
     suggestion: ["Keep frozen."],
     allegations: ["Contains Eggs", "High Spices", "Contains Preservatives"],
   },

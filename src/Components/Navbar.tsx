@@ -1,39 +1,31 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-
 import logo from "../images/logo.png";
 import "./Navbar.css";
 import { Offers } from "./Offers";
 import { Product } from "./Product";
+import { cartContext } from "../App";
 export const Navbar = () => {
-
-
+  // using useContext
+  let cartData: any = useContext(cartContext)
+  // LOgout functinality.
+  const LogOutHandler = () => {
+    let confirm = window.confirm("Your account will logout..")
+    if (confirm) {
+      localStorage.clear()
+    }
+  }
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light border-bottom">
         <div className="container-fluid">
           <img src={logo} alt="" />
-          <form className="d-flex">
-            <div className="input-group ms-5">
+          <form>
+            <div className="input-group ms-3">
               <input type="text" className="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2" />
-              <button className="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
+              <button className="btn btn-light" type="button" id="button-addon2"> <i className="material-icons">&#xe8b6;</i></button>
             </div>
-            {/* <div className="input-group ms-5">
-              <input
-                type="text"
-                className="form-control w-75"
-                placeholder="Search your product.."
-                aria-label="Search your products"
-                aria-describedby="button-addon2"
-              />
-              <button
-                className="btn btn-outline-secondary"
-                type="button"
-                id="button-addon2"
-              >
-                <i className="material-icons">&#xe8b6;</i>
-              </button>
-            </div> */}
+
           </form>
           <button
             className="navbar-toggler"
@@ -66,44 +58,36 @@ export const Navbar = () => {
                   style={{ color: "black" }}
                 >
                   <i className="fas fa-user-alt" style={{ fontSize: "24px" }}></i>
-                  <span> Hello SignIn to your account </span>
+                  <span>  Hello SignIn to your account </span>
                 </a>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
-                    <a className="dropdown-item" href="//">
-                      <Link to={'/signIn'}>signUp</Link>
-                    </a>
+                    <Link className="dropdown-item" to={'/signIn'}>signUp</Link>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="//">
-                      2
-                    </a>
+
+                    <Link className="dropdown-item" to={'/Login'}>Login</Link>
+
                   </li>
                   <li>
-                    <hr className="dropdown-divider" />
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="//">
-                      3
-                    </a>
+                    <a className="dropdown-item" onClick={LogOutHandler}>LogOut</a>
                   </li>
                 </ul>
               </li>
-
-
-              <li className="nav-item ms-5">
+              <Link className="dropdown-item" to={"/Cart"} ><li className="nav-item ms-5">
                 <i
                   className="fas fa-shopping-cart"
                   style={{ fontSize: "24px" }}
-                ></i>
-                <span> <Link to={"/Cart"}>cart</Link> </span>
+                ></i> <b style={{ fontSize: "20px" }}>{cartData.cart.length}</b>
+                <span><a className="dropdown-item" href="//">cart</a> </span>
               </li>
+              </Link>
             </ul>
           </div>
         </div>
       </nav>
       <Offers />
-      <Product />
+      <Product />, useEffect
     </div>
   );
 };

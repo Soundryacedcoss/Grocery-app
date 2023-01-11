@@ -1,117 +1,112 @@
-import React, {useState } from "react";
+import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import './SignUp.css'
-
+// defing the type of object 
+type obj = {
+  name: string
+  email: string
+  username: string
+  password: string
+  number: string
+}
 export default function Signup() {
-  const navigate=useNavigate();
-    const[name,setName]=useState("")
-    const[email,setEmail]=useState("")
-    const[username,setUsername]=useState("")
-    const[password,setPassword]=useState('')
-    const[number,setNumber]=useState('')
-    const[logarr,setLogarr]=useState([])
-     // functions for taking the value from input boxes
-     const nameHandler=(e:any)=>{
-        setName(e.target.value)
+  const navigate = useNavigate();
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [username, setUsername] = useState("")
+  const [password, setPassword] = useState('')
+  const [number, setNumber] = useState('')
+  const [logarr, setLogarr] = useState<any | []>([])
+  // functions for taking the value from input boxes
+  const nameHandler = (e: any) => {
+    setName(e.target.value)
+  }
+  const emailHandler = (e: any) => {
+    setEmail(e.target.value)
+  }
+  const usernameHandler = (e: any) => {
+    setUsername(e.target.value)
+  }
+  const passwordHandler = (e: any) => {
+    setPassword(e.target.value)
+  }
+  const numberHandler = (e: any) => {
+    setNumber(e.target.value)
+  }
+  const SignUpButtonHandler = () => {
+    // validation
+    var atposition = email.indexOf("@");
+    var dotposition = email.lastIndexOf(".");
+    if (name === "") {
+      alert("name should not be empty")
     }
-    const emailHandler=(e:any)=>{
-        setEmail(e.target.value)
+    else if (!isNaN(name as any)) {
+      alert("Name Should not be integer");
     }
-    const usernameHandler=(e:any)=>{
-        setUsername(e.target.value)
+    else if (email === "") {
+      alert("Plese enter your email");
     }
-    const passwordHandler=(e:any)=>{
-        setPassword(e.target.value)
+    else if ((atposition < 1 || email.lastIndexOf(".") < atposition + 2 || dotposition + 2 >= email.length)) {
+      alert("please enter valid email");
     }
-    const numberHandler=(e:any)=>{
-        setNumber(e.target.value)
+    else if (username === "") {
+      alert("Please enter your username");
     }
-    const SignUpButtonHandler=()=>{
-        var atposition=email.indexOf("@");
-        var dotposition=email.lastIndexOf(".");
-        if(name===""){
-          alert("name should not be empty")
-          // document.form.name.focus();
-        }
-        else if(!isNaN(name as any)){
-          alert("Name Should not be integer");
-          // document.form.name.focus();
-        }
-        else if(email===""){
-          alert("Plese enter your email");
-          // document.form.email.focus();
-        }
-        else if ((atposition<1 || email.lastIndexOf(".")<atposition+2 || dotposition+2>=email.length)) {
-          alert("please enter valid email");
-          // document.form.email.focus();
-        }
-        else if(username===""){
-          alert("Please enter your username");
-          // document.form.username.focus();
-        }
-        else if(password===""){
-          alert("please enter password");
-          // document.form.psw.focus();
-        }
-        else if(number===""){
-          alert("Enter mobile number")
-          // document.form.number.focus();
-        }
-        else if(isNaN(number as any)){
-          alert("number should be integer")
-          // document.form.number.focus();
-       }
-       else{
-        
-        // var obj={
-        //     name:name,
-        //     email:email,
-        //     username:username,
-        //     password:password,
-        //     number:number,
-        // }
-        // logarr.push(obj)
-        let arr= JSON.stringify(logarr)
-        // set the values in local storage
-        localStorage.setItem("data",arr);
-        alert("Created account succesfully Now please login")
-        navigate('/Login')
+    else if (password as any === "") {
+      alert("please enter password");
+    }
+    else if (number as any === "") {
+      alert("Enter mobile number")
+    }
+    else if (isNaN(number as any)) {
+      alert("number should be integer")
+    }
+    else {
+      var obj: obj = {
+        name: name,
+        email: email,
+        username: username,
+        password: password,
+        number: number,
       }
-    }
-    // back to login page
-    const Loginhere=()=>{
+      logarr.push(obj)
+      let arr = JSON.stringify(logarr)
+      // set the values in local storage
+      localStorage.setItem("data", arr);
+      alert("Created account succesfully Now please login")
       navigate('/Login')
     }
-    // back to home page
-    const BackHAndler=()=>{
-      navigate('/')
-    }
+  }
+  // back to login page
+  const Loginhere = () => {
+    navigate('/Login')
+  }
+  // back to home page
+  const BackHAndler = () => {
+    navigate('/')
+  }
 
   return (
     <div>
-     {/* <div className="flex"> */}
-        <button onClick={BackHAndler} className="BackBUtton">
-          Back To Home
-        </button>
-        
-      {/* </div> */}
-       <div className="LoginPage" >
-          <h1>Sign Up</h1>
-          <hr />
-         
-          <input type="text" name="name" placeholder="Full name" onChange={nameHandler}  />
-          <input type="text" placeholder="Enter Email" name="email" onChange={emailHandler} />
-          <input type="text" name="username" placeholder="Enter username" onChange={usernameHandler}/>
-          <input
-            type="password"
-            placeholder="Enter Password"
-            name="psw" onChange={passwordHandler}
-            minLength={4} maxLength={20}
-          />
-          <input type="text" name="number" placeholder="Enter your number" onChange={numberHandler} maxLength={10} minLength={10} />
-          <button className="SignUpBUtton" onClick={SignUpButtonHandler}>Sign Up</button> 
-          <p className="LoginSignUpLink" onClick={Loginhere}> Already have account <b > LoginHere</b></p>
-         </div>
+      <button onClick={BackHAndler} className="btn btn-info ms-3 mt-3">
+        Back To Home
+      </button>
+      <div className="LoginPage" >
+        <h1>Sign Up</h1>
+        <hr />
+        <input type="text" name="name" placeholder="Full name" onChange={nameHandler} />
+        <input type="text" placeholder="Enter Email" name="email" onChange={emailHandler} />
+        <input type="text" name="username" placeholder="Enter username" onChange={usernameHandler} />
+        <input
+          type="password"
+          placeholder="Enter Password"
+          name="psw" onChange={passwordHandler}
+          minLength={4} maxLength={20}
+        />
+        <input type="text" name="number" placeholder="Enter your number" onChange={numberHandler} maxLength={10} minLength={10} />
+        <button className="SignUpBUtton" onClick={SignUpButtonHandler}>Sign Up</button>
+        <p className="LoginSignUpLink" onClick={Loginhere}> Already have account <b > LoginHere</b></p>
+      </div>
     </div>
   )
 }
