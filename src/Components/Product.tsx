@@ -25,14 +25,16 @@ export const Product = () => {
     }
     return (
         <>
-            <div className='card flex-row flex-wrap justify-content-around' >
+            <div style={{ display: "flex", flexWrap: "wrap", marginLeft: "4%" }}>
                 {data.map((item) =>
-                    <div className=' w-25 m-4 Products' key={Math.random() * 10}>
-                        <img src={item.images[0]} className='w-100 h-50' alt="" />
-                        <p style={{ fontSize: "1.5vw", height: "100px", padding: "2%" }}>{item.title}</p>
-                        <p style={{ fontSize: "1.5vw", height: "50px", marginLeft: "34%" }}>₹{item.price}</p>
-                        <button className="btn btn-primary" value={item._id} onClick={AddToCartHandler} style={{ width: "8rem", marginLeft: "25%" }}>Add to cart</button>
-                    </div>)}
+                    <div className="Card Products" style={{ width: "18rem", margin: "1%", justifyItems: "center" }}>
+                        <img src={item.images[0]} className="card-img-top w-100 h-75" alt="..." />
+                        <p style={{ height: "30px", marginLeft: "2%" }}>{item.title}</p>
+                        <h3 style={{ height: "30px", marginLeft: "30%" }}>₹{item.price}</h3>
+                        <button className="btn btn-primary"
+                            value={item._id} style={{ marginLeft: "28%" }} onClick={AddToCartHandler} >Add to cart</button>
+                    </div>
+                )}
             </div>
         </>
     )

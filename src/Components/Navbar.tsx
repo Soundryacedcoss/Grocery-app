@@ -16,17 +16,15 @@ export const Navbar = () => {
     }
   }
   return (
-    <div>
+    <>
+
       <nav className="navbar navbar-expand-lg navbar-light border-bottom">
         <div className="container-fluid">
           <img src={logo} alt="" />
-          <form>
-            <div className="input-group ms-3">
-              <input type="text" className="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2" />
-              <button className="btn btn-light" type="button" id="button-addon2"> <i className="material-icons">&#xe8b6;</i></button>
-            </div>
-
-          </form>
+          <div className="input-group ms-3">
+            <input type="text" className="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2" />
+            <button className="btn btn-light h-100 pb-3 pt-3" type="button" id="button-addon2"> <i className="material-icons">&#xe8b6;</i></button>
+          </div>
           <button
             className="navbar-toggler"
             type="button"
@@ -87,7 +85,7 @@ export const Navbar = () => {
         </div>
       </nav>
       <Offers />
-      <Product />, useEffect
-    </div>
+      <Product />
+    </>
   );
 };
